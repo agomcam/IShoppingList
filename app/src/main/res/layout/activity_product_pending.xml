@@ -13,18 +13,36 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         android:padding="20dp"
-        android:gravity="center"
         tools:layout_editor_absoluteY="1dp">
-
-        <Spinner
-            android:id="@+id/spProducts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Producto pendiente"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
+
+            <Spinner
+                android:id="@+id/spProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
             android:orientation="horizontal"
+            android:layout_weight="0"
             android:layout_marginTop="50dp">
 
             <Button
@@ -33,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:textSize="20sp"
                 android:text="Guardar" />
 
             <Button
@@ -40,8 +59,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="20sp"
                 android:layout_margin="5dp"
                 android:text="Cancelar" />
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.AddNewProductActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,63 +22,111 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="Añadir producto"
                 android:textAlignment="center"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvAddId"
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv1"
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="ID"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAddId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="0000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/etAddName"
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="Nombre"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etAddName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Nombre"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:hint="Nombre"/>
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Note"
-                android:textAlignment="center"
-                android:textSize="30sp" />
 
-            <EditText
-                android:id="@+id/etAddNote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Nota del producto"/>
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="Nota"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etAddNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Nota del producto"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
             <Switch
                 android:id="@+id/swAddPending"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Pendiente de compra" />
-
+                android:text="Pendiente de compra"
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="0"
             android:orientation="horizontal">
 
@@ -85,15 +134,19 @@
                 android:id="@+id/btnAddSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Guardar" />
+                android:text="Guardar"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btnAddBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Volver" />
+                android:text="Volver"
+                android:textSize="20sp" />
         </LinearLayout>
 
 
