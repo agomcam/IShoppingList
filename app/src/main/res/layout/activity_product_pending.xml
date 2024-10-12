@@ -25,11 +25,11 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:text="Producto pendiente"
                 android:textAlignment="center"
                 android:textSize="30dp"
-                android:textStyle="bold"
-                android:layout_marginBottom="20dp"/>
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spProducts"

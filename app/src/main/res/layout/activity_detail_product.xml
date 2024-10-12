@@ -25,13 +25,16 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:layout_weight="1"
+                android:text="Detalles del producto"
                 android:textAlignment="center"
-                android:text="Detalles del producto" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <TextView
@@ -41,7 +44,8 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:text="Nombre"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvDetailName"
@@ -57,6 +61,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <TextView
@@ -66,7 +71,8 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:text="Nota"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvDetailNote"
@@ -84,8 +90,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:text="Pendiente de compra"
-                android:textSize="20sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -100,7 +108,9 @@
                 android:id="@+id/btnEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:layout_margin="5dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
                 android:text="Editar"
                 android:textSize="20sp" />
 
@@ -108,8 +118,10 @@
                 android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" android:layout_margin="5dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:text="Volver"
+                android:textStyle="bold"
                 android:textSize="20sp" />
         </LinearLayout>
 
