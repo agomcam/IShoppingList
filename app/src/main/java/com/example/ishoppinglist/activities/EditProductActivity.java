@@ -37,6 +37,9 @@ public class EditProductActivity extends AppCompatActivity {
         EditText etName = findViewById(R.id.etEditName);
         EditText etNote = findViewById(R.id.etEditNote);
         Switch swPending = findViewById(R.id.swEditPending);
+        Switch swLactosa= findViewById(R.id.swEditLactosa);
+        Switch swGluten = findViewById(R.id.swEditGluten);
+
         Button btnBack = findViewById(R.id.btnEditBack);
         Button btnSave = findViewById(R.id.btnEditSave);
 
@@ -49,6 +52,8 @@ public class EditProductActivity extends AppCompatActivity {
         etName.setText(currentProduct.getName());
         etNote.setText(currentProduct.getNote());
         swPending.setChecked(currentProduct.isState());
+        swLactosa.setChecked(currentProduct.isLactosa());
+        swGluten.setChecked(currentProduct.isGluten());
 
 
         // Asignamos las acciones de los botones
@@ -75,6 +80,8 @@ public class EditProductActivity extends AppCompatActivity {
                 currentProduct.setName(etName.getText().toString());
                 currentProduct.setNote(etNote.getText().toString());
                 currentProduct.setState(swPending.isChecked());
+                currentProduct.setLactosa(swLactosa.isChecked());
+                currentProduct.setGluten(swGluten.isChecked());
                 Toast toast = new Toast(EditProductActivity.this);
                 toast.setText("Producto editado correctamente");
                 toast.show();

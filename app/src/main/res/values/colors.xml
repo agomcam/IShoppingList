@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="brow">#996952</color>
     <color name="beige">#dfc6a8</color>
+    <color name="lactosa">#F8BBD0</color>
+    <color name="gluten">#D7CCC8</color>
+    <color name="lactosagluten">#B2EBF2</color>
 </resources>

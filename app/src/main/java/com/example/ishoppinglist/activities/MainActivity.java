@@ -2,9 +2,13 @@ package com.example.ishoppinglist.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,19 +37,24 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         List<Product> productsPending = new ArrayList<>();
+        List<String> options = new ArrayList<>();
         ListView lvProduct = findViewById(R.id.lvElements);
         Button btnAddPending = findViewById(R.id.btnAddPending);
         Button btnAdd = findViewById(R.id.btnAddSystem);
+        Spinner spOption = findViewById(R.id.spOptions);
         // inicializamos la lista
         DataBase.inicializeList();
 
+        // ponemos los datos
+        options.add("Todos");
+        options.add("Sin lactosa");
+        options.add("Sin Gluten.");
 
-        ProductAdapter productAdapter = new ProductAdapter(MainActivity.this, 0, DataBase.getProductListPending());
+
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, options);
 
 
-        // Asignamos el adaptador a la lista de los elementos
-        lvProduct.setAdapter(productAdapter);
-
+        spOption.setAdapter(spinnerAdapter);
 
         // Ajustes del boton
         btnAddPending.setOnClickListener(new View.OnClickListener() {
@@ -71,8 +80,35 @@ public class MainActivity extends AppCompatActivity {
             Product product = DataBase.getProductListPending().get(i);
 
             Intent intentDetail = new Intent(MainActivity.this, DetailProductActivity.class);
-            intentDetail.putExtra("product", product);
+            intentDetail.putExtra("product", product.getId());
             startActivity(intentDetail);
+        });
+
+        spOption.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0:
+                        ProductAdapter productAdapter = new ProductAdapter(MainActivity.this, 0, DataBase.getProductListPending());
+                        lvProduct.setAdapter(productAdapter);
+                        break;
+                    case 1:
+                        productAdapter = new ProductAdapter(MainActivity.this, 0, DataBase.getProductLactosa());
+                        lvProduct.setAdapter(productAdapter);
+                        break;
+                    case 2:
+                        productAdapter = new ProductAdapter(MainActivity.this, 0, DataBase.getProductGluten());
+                        lvProduct.setAdapter(productAdapter);
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                ProductAdapter productAdapter = new ProductAdapter(MainActivity.this, 0, DataBase.getProductListPending());
+                lvProduct.setAdapter(productAdapter);
+            }
         });
     }
 }

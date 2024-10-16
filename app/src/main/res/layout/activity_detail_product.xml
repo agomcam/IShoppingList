@@ -95,6 +95,24 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
+            <Switch
+                android:id="@+id/swLactosa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Lactosa"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <Switch
+                android:id="@+id/swGluten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Gluten"
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
 

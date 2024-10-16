@@ -36,6 +36,8 @@ public class AddNewProductActivity extends AppCompatActivity {
         TextView tvName = findViewById(R.id.etAddName);
         TextView tvNote = findViewById(R.id.etAddNote);
         Switch swPending = findViewById(R.id.swAddPending);
+        Switch swLactosa = findViewById(R.id.swAddLactosa);
+        Switch swGluten = findViewById(R.id.swAddGluten);
         Button btnSave = findViewById(R.id.btnAddSave);
         Button btnBack = findViewById(R.id.btnAddBack);
 
@@ -61,6 +63,8 @@ public class AddNewProductActivity extends AppCompatActivity {
                 product.setName(tvName.getText().toString());
                 product.setNote(tvNote.getText().toString());
                 product.setState(swPending.isChecked());
+                product.setLactosa(swLactosa.isChecked());
+                product.setGluten(swGluten.isChecked());
 
                 if (product.getName().isEmpty()){
                     Toast toas = new Toast(AddNewProductActivity.this);
@@ -75,6 +79,8 @@ public class AddNewProductActivity extends AppCompatActivity {
                 tvName.setText("");
                 tvNote.setText("");
                 swPending.setChecked(false);
+                swLactosa.setChecked(false);
+                swGluten.setChecked(false);
             }
         });
     }
